@@ -1,8 +1,16 @@
 const inputElement = document.getElementById("input-todo")
 const container = document.getElementById("cards-container")
 const addButton = document.getElementById("add-button")
+const addButton1 = document.getElementById("add-button1")
 
 addButton.onclick = function () {
+  const card = createCard(inputElement.value)
+  container.append(card)
+
+  inputElement.value = ""
+}
+
+addButton1.onclick = function () {
   const card = createCard(inputElement.value)
   container.append(card)
 
